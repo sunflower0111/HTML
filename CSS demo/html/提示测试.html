@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>签到详情</title>
+
+    <link href="../resources/css/mui.css" rel="stylesheet">
+<style type="text/css">
+    .tips {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: right;
+    }
+    .tips .tips-arrow {
+    position: absolute;
+    top: -25px;
+    right: 6px;
+
+    overflow: hidden;
+
+    width: 26px;
+    height: 26px;
+}
+    .tips .tips-arrow:after
+    {
+        position: absolute;
+        top: 19px;
+        left: 0;
+
+        width: 26px;
+        height: 26px;
+
+        content: ' ';
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+
+        border-radius: 5px;
+        background: #9e9e9e;
+    }
+    .tips .tips-centent{
+      width: 200px;
+      padding: 10px 20px;
+      font-size: 14px;
+      color:  #fff;
+      background-color: #9e9e9e;
+      border-radius: 10px;
+    }
+    .tips .tips-centent span{
+      margin-left: 10px;
+      position: relative;
+      top: 2px;
+    }
+
+
+    img.headerImg{
+      width: 60px;
+      height: 60px;
+      border-radius: 100px;
+    }
+</style>
+  </head>
+  <body style="background-color: #fff;">
+
+<div style="position: relative; text-align: right;">
+          <img  src="../resources/images/myphoto.png" class="headerImg" id="img_id" onclick="changePhoto();" />
+      <div class="tips">
+        <div class="tips-arrow"></div>
+        <div class="tips-centent">上传领富金币<span class="mui-icon mui-icon-minus"></span></div>
+      </div>
+</div>
+
+
+  </body>
+</html>

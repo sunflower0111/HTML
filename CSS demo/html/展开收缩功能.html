@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>div展开收缩代码</title>
+<style>
+* { margin:0; padding:0;}
+body { text-align:center; font:75% Verdana, Arial, Helvetica, sans-serif;}
+h1 { font:125% Arial, Helvetica, sans-serif; text-align:left; font-weight:bolder; background:#333;  padding:3px; display:block; color:#99CC00}
+.class1 { width:40%; background:#CCC; position:relative; margin:0 auto; padding:5px;}
+span {/*  position:absolute; right:10px; top:8px; */ cursor: pointer; color:yellow;}
+
+#class1content { height:114px;background:#333; overflow:hidden;display:none;}
+</style>
+<script>
+function $(element){
+return element = document.getElementById(element);
+}
+function $D(){
+var d=$('class1content');
+var h=d.offsetHeight;
+var maxh=114;
+
+function dmove(){
+h+=50; //设置层展开的速度
+if(h>=maxh){
+d.style.height='114px';
+clearInterval(iIntervalId);
+}else{
+d.style.display='block';
+d.style.height=h+'px';
+}
+}
+iIntervalId=setInterval(dmove,2);
+}
+function $D2(){
+var d=$('class1content');
+var h=d.offsetHeight;
+var maxh=114;
+function dmove(){
+h-=50;//设置层收缩的速度
+if(h<=0){
+d.style.display='none';
+clearInterval(iIntervalId);
+}else{
+d.style.height=h+'px';
+}
+}
+iIntervalId=setInterval(dmove,2);
+}
+function $use(targetid,objN){
+var d=$(targetid);
+var sb=$(objN);
+ if (d.style.display=="block"){
+    $D2();
+       d.style.display="none";
+       sb.innerHTML="展开";
+       sb.style.background="#ff0000";
+  } else {
+    $D();
+       d.style.display="block";
+       sb.innerHTML='收缩';
+       sb.style.background="#ffffff url(../resources/images/icon_expander_up.png) no-repeat 88px center";
+   }
+}
+</script>
+</head>
+<body>
+<div class="class1">
+
+
+		<div id="class1content">小蜗牛问妈妈：为什么我们从生下来，就要背负这个又硬又重的壳呢？<br />
+		妈妈：因为我们的身体没有骨骼的支撑，只能爬，又爬不快。所以要这个壳的保护！<br />
+		小蜗牛：毛虫姊姊没有骨头，也爬不快，为什么她却不用背这个又硬又重的壳呢？ <br />
+		妈妈：因为毛虫姊姊能变成蝴蝶，天空会保护她啊。 <br />
+		小蜗牛：可是蚯蚓弟弟也没骨头爬不快，也不会变成蝴蝶他什么不背这个又硬又重的壳呢？ <br />
+		妈妈：因为蚯蚓弟弟会钻土, 大地会保护他啊。 <br />
+		小蜗牛哭了起来：我们好可怜，天空不保护，大地也不保护。 <br />
+		蜗牛妈妈安慰他：所以我们有壳啊！我们不靠天，也不靠地，我们靠自己。
+		</div>
+		<h1>div展开收缩效果 <span id="stateBut" onClick="$use('class1content','stateBut')">展开</span></h1>
+
+</div>
+</body>

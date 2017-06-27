@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>position测试</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/style.css"/>
+<style>
+.wrap {
+  width: 200px;
+  height: 200px;
+  background: yellow;
+    position: relative;  //第一种方法一般都需要加relative
+  }
+
+
+.content {
+  width: 100px;
+  height: 100px;
+  background: green;
+  }
+
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/* 溢出 */
+.Absolute-Center.is-Overflow {
+  overflow: auto;
+}
+
+/* 重绘 */
+.Absolute-Center.is-Resizable {
+  min-width: 20%;
+  max-width: 80%;
+  min-height: 20%;
+  max-height: 80%;
+  resize: both;
+  overflow: auto;
+}
+
+/* div内容只有图片 */
+.Absolute-Center.is-Image img {
+  width: 100%;
+  height: auto;
+}
+
+.is-Negative {
+        position: absolute;
+        top: 50%; left: 50%;
+        margin-left: -170px; /* (width + padding)/2 */
+        margin-top: -120px; /* (height + padding)/2 */
+}
+
+
+</style>
+</head>
+<body>
+
+<p>方法一：position & margin</p>
+<div class="wrap">
+    <div class="content absolute-center"></div>
+</div>
+<p>方法二： 负外边距 position & margin</p>
+
+
+
+</body>
+
+
+</html>
+</html>

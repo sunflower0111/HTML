@@ -1,0 +1,61 @@
+*{margin:0;
+ padding:0;
+ font-size:13px;
+ list-style:none;
+}
+p{
+	font-size: 14px;
+}
+button{
+	font-size: 20px;
+	padding:10px;
+}
+
+.clearfix:before,
+.clearfix:after: {
+display: table;
+content: "";
+}
+.clearfix:after{
+	clear: both;
+}
+
+/*addClass测试*/
+.ui-font-30{
+	font-size: 30px;
+	color:#ff0000;
+}
+.ui-font-20{
+	font-size: 20px;
+	color:#00ff00;
+}
+div{
+	height: 30px;
+}
+/*toggleClass测试*/
+.ul-layout li{
+	font-size: 24px;
+}
+.listitem_1, .listitem_3
+{
+color:red;
+}
+.listitem_0, .listitem_2
+{
+color:blue;
+}
+
+/*slide滑动效果*/
+div.panel,p.flip,p.flip2,p.flip3
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+height:120px;
+display:none;
+}

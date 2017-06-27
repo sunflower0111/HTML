@@ -1,0 +1,154 @@
+﻿
+
+/*  * 将浏览器中默认的边距去掉。如body *
+
+*     * {
+*        margin:0;
+*        padding:0;
+*        border:0;
+    }   */
+
+
+
+/* 首行缩进 */
+div.text-indent {
+  text-indent: 2em;
+  width: 140px;
+}
+
+/* 单行显示 */
+div.text-inline {
+    overflow: hidden;
+
+    width: 140px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 清除浮动 */
+
+.clearfix:before,
+.clearfix:after{
+  display:table;
+  content: " ";
+}
+.clearfix:after{
+  clear: both;
+}
+.right{float:right}
+.left{float: left;}
+
+
+/* input 输入框点击无外框 */
+
+input:focus{
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+/* input 清除ios系统自带的样式 */
+input,button {
+  -webkit-appearance:none;
+  border-radius:0;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+/* body {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    margin: 0;
+} */
+
+
+/* 顶部固定 */
+
+body > header{
+
+  position:fixed;
+  top:0px;
+  z-index:999;
+}
+
+/* 底部固定 */
+
+body > footer{
+  z-index:999;
+  position:fixed;
+  bottom:0px;
+  z-index:999;
+}
+
+/* 内容区 section 不支持ie8以下 */
+body > section{
+   padding-top:88px;
+
+}
+body > footer + section{
+  padding-bottom: 104px;
+}
+
+
+.ui_chat_send_input {
+    display: block;
+
+    width:740px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    background-color: #f0f;
+}
+
+.ui_chat_send_input div {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 34px;
+
+    display: inline-block;
+    overflow-y: auto;
+
+    width: calc(100% - 112px); /* 父宽度为设置的宽度。  其他元素72+行内块间距8+2border+本身padding15*/
+    min-height: 40px;
+    max-height: 140px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 6px 15px;
+
+    vertical-align: middle;
+
+    color: #424242;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e7e6e8;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    outline: none;
+    background-color: #fff;
+}
+
+ .ui_chat_send_button {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 78px;
+
+    display: inline-block;
+
+    width: 72px;
+    height: 78px;
+
+    text-align: right;
+    vertical-align: middle;
+
+    color: #424242;
+    background-color: #f00;
+}
+
